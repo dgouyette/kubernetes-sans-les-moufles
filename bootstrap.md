@@ -2,7 +2,7 @@
 
 Installation de kubernetes avec minkube. 
 
-Cela permet de tester en local kubernetes sans devoir passer par un cloud type Google Compute Engine
+Cela permet de tester en local kubernetes sans devoir passer par un cloud type Google Compute Engine.
 
 
 ## MacOS
@@ -20,8 +20,23 @@ Récupérer [binaries/macos/minikube](binaries/macos/minikube)
 Rendez le exécutable `chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
 ### Complétion
-source <(kubectl completion bash)
 
+ZSH 
+`source <(kubectl completion zsh)`
+
+
+Si vous avez du réseau : 
+
+```
+## Bash 3.2 included with macOS
+brew install bash-completion
+## Bash 4.1+
+brew install bash-completion@2
+```
+
+*Si vous utilisez oh-my-zsh : *
+
+`éditer ~/.zshrc  et ajouter à plugins=kubectl`
 
 ## Linux
 
